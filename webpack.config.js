@@ -2,7 +2,7 @@ var path = require("path");
 var webpack = require("webpack");
 
 module.exports = {
-  entry: "main.js",
+  entry: "./main.js",
   output: {
     path: path.resolve(__dirname, "./dist"),
     publicPath: "/dist/",
@@ -12,7 +12,7 @@ module.exports = {
     rules: [
       {
         test: /\.html$/,
-        loader: "raw-loader"
+        loader: "file-loader"
       }
       
     ]
