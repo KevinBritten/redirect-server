@@ -2,14 +2,14 @@
 
 Monitor a site on multiple devices using webpack dev server. Useful for seeing the same site on different size screens or operating systems.
 
-# INSTALL
+## INSTALL
 
 The redirect server requires you to have node and npm installed
 
 1. `git clone https://github.com/KevinBritten/redirect-server.git`
 2. `npm i`
 
-# USEAGE
+## USEAGE
 
 1. `webpack run dev`
 2. `node siteloader.js *URL*`
