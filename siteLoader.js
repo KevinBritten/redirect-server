@@ -1,46 +1,19 @@
-'use strict';
+const fs = require('fs')
 
-const port = '3000'
-var localIP = Object.values(require("os").networkInterfaces())
+const localIP = Object.values(require("os").networkInterfaces())
 .flat()
 .filter(({ family, internal }) => family === "IPv4" && !internal)
 .map(({ address }) => address)
-
-
-const { networkInterfaces } = require('os');
-const fs = require('fs')
-
-const nets = networkInterfaces();
-// const results = Object.create(null); // Or just '{}', an empty object
-
-// function setIP() {
-
-//   for (const name of Object.keys(nets)) {
-//       for (const net of nets[name]) {
-//           // Skip over non-IPv4 and internal (i.e. 127.0.0.1) addresses
-//           if (net.family === 'IPv4' && !net.internal) {
-//               if (!results[name]) {
-//                   results[name] = [];
-//               }
-//               results[name].push(net.address);
-//           }
-//       }
-//   }
-//   localIP = results["en0"][0]
-
-// }
-
-// setIP()
-
-let url = process.argv[2].includes('http') ? process.argv[2] : 'https://' + process.argv[2]
+let url = process.argv[2]
+const port = '3000'
+url = url.includes('http') ? url : 'https://' + url
 
 
 const data = `<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <script type="text/javascript">
-    window.close('openedSite')
+    <script type="text/javascript"> 
       window.open('${url}', 'openedSite');
     </script>
     <title>redirect</title>
