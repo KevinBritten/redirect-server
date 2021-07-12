@@ -6,8 +6,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --hot --host 0.0.0.0 --port 3000",
-    "devy": "cross-env NODE_ENV=development webpack-dev-server --hot --host 0.0.0.0 --port 3000 --open"
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --hot --host 0.0.0.0 --port 3000 --useLocalIp true" 
   },
   "devDependencies": {
     "cross-env": "^5.0.5",
