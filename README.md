@@ -1,6 +1,6 @@
 # Redirect Server
 
-Monitor a site on multiple devices using webpack dev server. Usefull for seeing the same site on different size screens or operating systems.
+Monitor a site on multiple devices using webpack dev server. Useful for seeing the same site on different size screens or operating systems.
 
 # INSTALL
 
