@@ -4,9 +4,9 @@ const localIP = Object.values(require("os").networkInterfaces())
 .flat()
 .filter(({ family, internal }) => family === "IPv4" && !internal)
 .map(({ address }) => address)
-let url = process.argv[2]
+let [node, program, url, ...options] = process.argv
 const port = '3000'
-url = url.includes('http') ? url : 'https://' + url
+url = !url.includes('http') && !options.includes("--nohttps") ?  'https://' + url : url
 
 
 const data = `<!DOCTYPE html>
